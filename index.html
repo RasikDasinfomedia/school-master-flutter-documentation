@@ -40,7 +40,7 @@ rel="stylesheet" type="text/css">
         <div class="col-md-3 logo"> <a href="index.html"><img src="images/mojoomla_logo.jpg" width="150" id="img-logo" alt="logo"></a> </div>
         <div class="col-md-8 col-md-offset-1 desc">
           <h4 class="slight">School Management System</h4>
-          <h5 class="slight"><small> Documented by Mojoomla - at October 09 2015</small></h5>
+          <h5 class="slight"><small>Documented by Mojoomla - at October 09 2015</small></h5>
         </div>
       </div>
       <div class="col-md-4">
@@ -48,8 +48,8 @@ rel="stylesheet" type="text/css">
           <div class="logo"> <img src="images/mojoomla_logo.png" id="img-logo" alt="mojoomla" style="margin-bottom:20px;"> </div>
           <ul id="top-menu">
 			<li><a href="#Api-section">API section</a></li>
-			  <li><a href="#setting-up-android-project">setting up Android Project</a></li>
-			   <li><a href="#Android-Customization">Android Customization</a></li>
+			  <li><a href="#setting-up-android-project">setting up flutter Project</a></li>
+			   <li><a href="#Android-Customization">Fluuter Customization</a></li>
 			   <li><a href="#Notification_Setting">FCM Notification Setting</a></li>
 			    <li><a href="#Uploading-to-the-playstore">Uploading To The Playstore</a></li>
 				 </ul>
@@ -83,7 +83,7 @@ rel="stylesheet" type="text/css">
 
 		  <section id="setting-up-android-project">
 		  <hr class="vertical-space2">
-			    <h3><strong>B). <u>Setting up android project</u></strong></h3>
+			    <h3><strong>B). <u>Setting up flutter project</u></strong></h3>
 				<br>
                <h5><strong>1. <u>Requirement</u></strong></h5>
               <ol >
@@ -111,60 +111,24 @@ rel="stylesheet" type="text/css">
 			
 			<h5><strong>3. <u>Update the IDE and SDK Tools</u></strong></h5>
 			<ol>
-				<li>The Android SDK Manager provides the SDK tools, platforms, and other components you need to develop your apps.</li>
-				<li>School MasterApp minimum required SDK Platform API level 14</li>
+				<li>The Flutter SDK Manager provides the SDK tools, platforms, and other components you need to develop your apps.</li>
+				<li>School MasterApp minimum required SDK Platform API level <Strong>21</strong></li>
 				<li>Install SDK Platform API levels.</li>
 				<li>Open the Preferences window by clicking File -> Settings.</li>
 				<li>In the left panel, click Appearance & Behavior -> System Settings -> Android SDK.</li>
 				<li>Select required SDK platforms</li>
 				<li> Click ok.</li>
 			</ol>
-			
-			  <h5><strong>4. <u>Project Configuration</u></strong></h5>
-               
-	<ol>
-		<li> On Android Studio menu select File -> New -> Import Project</li>
-		<li> In the Select Eclipse or Gradle Project to Import window that appears, navigate to the root directory of the project you want to import.</li>
-		<li> Click OK.</li> 
-		<li> Android Studio then open the project in a new IDE window.</li>
-		</ol>        
-	  <h4>Import Support Dependency to Android Studio</h4>
-	<p>Once Android Studio is Done, After install the support library Dependency. </p>	
-	<ol>
-		<li>Right click on the School Management System Project -> Open Module Settings</li>
-		<li>Select Dependencies -> Select library Dependency then click on ok</li>	
-	</ol>
-	<img src="images/dependencies.png" width="500" id="img-logo" alt="logo">
-	<br><br>
-     
-<p></p>
-	<h4>Troubleshooting Errors.</h4>
-	If you still have errors then it could mean:
-	<ol>
-		<li> You did not install Android Studio properly. I would suggest Open SDK Manager and Download Intel x86 Emulator Accelerator (HAXM installer) if you haven't.</li>
-		<li> Now go to your SDK directory (C:\users\Admin\AppData\Local\Android\sdk, generally). In this directory Go to extras > intel > Hardware_Accelerated_Execution_Manager and run the file named "intelhaxm-android.exe".</li>
-		<li> Restart Android Studio and then try to start the AVD again.
-			
-			<br/>
-			<b> A.) If it does not have errors then the problem lies on the source file. Make sure you have imported correctly. If you did not use step 1 above, then maybe it could be something wrong with your Android Development Setup. Consider checking for updates. 
+			<br>
 
-			
-			</li>
-
-	</ol>
-	At this point there should be no more errors on the project.
-	
-	
-			
-          <hr>
 		  </section>
 		  <section id="Android-Customization">
 		  			   <h3><strong>C). <u>Android Customization</u></strong></h3>
-			
+			<br>
                <h5><strong>1. <u>Server Url</u></strong></h5>
-			  The server url can be changed from the Const.java file in the values folder.
+			  The server url can be changed from the StaticData.dart file in the values folder.
 			  <ol>
-				<li>Open the /src/main/java/com.schoolmanagementsystem/Util/Const.java.</li>
+				<li>Open the /school_app_flutter\lib\utils\StaticData.dart</li>
 				<li>Example : BASE=http://..... </li>
 				<li>Change the BASE value to the server url.</li>
 				<li>Replace Your Url BASE value.</li>
@@ -175,41 +139,69 @@ rel="stylesheet" type="text/css">
 			  
 				
 			   	   <h5><strong>2. <u>Change Launcher icon</u></strong></h5>
-		<p><a href="#change-launcher-icon">Change the launcher icon</a> in <code>res/drawable-*/ic_launcher.png</code>	   </br>
+		<p><a href="#change-launcher-icon">Change the Application icon</a> in <code>res/drawable-*/ic_launcher.png</code>	   </br>
         Replace the following files in the <code>res</code> folder, with your own icon named <code>ic_launcher.png</code> :</p>
-        <ul>
-        <li><code>res/drawable-hdpi/ic_launcher.png</code> with 72x72 px</li>
-        <li><code>res/drawable-xhdpi/ic_launcher.png</code> with 96x96 px</li>
-        <li><code>res/drawable-xxhdpi/ic_launcher.png</code> with 144x144 px</li>
-        <li><code>res/drawable-xxxhdpi/ic_launcher.png</code> with 192x192 px</li>
-        </ul>
-        <p><strong>Note:</strong> You need the 512x512 px size for publishing to Google Play.</p>
+    	<p>Change the launcher icon in <code>Replace the default app icons:<br>
 
 <h5><strong>3. <u>Change Application name</u></strong></h5>
-        <p><a href="#change-application-name">Change the application name</a> in <code>res/values/strings.xml</code></br>
-		The application name can be changed from the <code>strings.xml</code> file in the values folder. 
+       <p>Change the application name To change the name of a Flutter app, you need to modify the appropriate files and configurations. Here's a step-by-step guide to help you change the app name:		
+		</p>
         <ol>
-        <li> Open the <code>res</code> folder</li>
-        <li>Navigate to the values folder and open the strings.xml file</li>
-        <li>Change the <code>app_name</code> value to the name you want</li>
-        </ol>
+        <li>Open the Flutter project in your preferred integrated development environment (IDE) or code editor.</li>
+        <li>Locate the <strong>pubspec.yaml</strong> file in the root directory of your Flutter project.</li>
+        <li>Open the <strong>pubspec.yaml</strong>  file and find the <strong>name </strong> field. By default, it should be something like <strong>name: your_app_name</strong>.</li>
+        <li>Change the value of the <strong>name </strong> field to your desired app name. Make sure to follow the naming conventions for Flutter projects (lowercase letters, underscores instead of spaces, etc.). For example, you can change it to <strong>name: my_flutter_app</strong>.</li>
+		<li>Save the <strong>pubspec.yaml</strong> file.</li>
+		<li>Open the <strong>android</strong> directory in your Flutter project.</li>
+		<li>Locate the <strong>app</strong> directory inside the <strong>android</strong> directory and open it.</li>
+		<li>Inside the <strong>app</strong> directory, find the <strong>build.gradle</strong> file (usually located at <strong>android/app/build.gradle</strong>).</li>
+		<li>Open the <strong>build.gradle</strong> file and locate the <strong>defaultConfig</strong> section.</li>
+		<li>In the <strong>defaultConfig</strong> section, find the <strong>applicationId<strong> field. The value of this field represents the unique identifier of your app.</li>
+		<li>Change the value of the <strong>applicationId<strong> field to match your desired app package name. The package name should typically follow the reverse domain name notation. For example, if your domain is <strong>example.com</strong>, you can use <strong>applicationId: com.example.myflutterapp</strong>.</li>
+		<li>Save the <strong>build.gradle</strong> file.</li>
+		<li>Now, you need to update the app name in the iOS configuration.</li>
+		<li>Open the <strong>ios</strong> directory in your Flutter project.</li>
+		<li>Inside the <strong>ios</strong> directory, find the <strong>Runner</strong> directory and open it.</li>
+		<li>Locate the <strong>Info.plist</strong> file (usually located at <strong>ios/Runner/Info.plist</strong>).</li>
+		<li>Open the <strong>Info.plist<strong> file and find the <strong><key>CFBundleName</key></strong> section.</li>
+		<li>Change the value of the <strong><string></strong> tag below <strong><key>CFBundleName</key></strong> to your desired app name. For example, <strong><string>My Flutter App</string></strong>.</li>
+		<li>Save the <strong>Info.plist</strong> file.</li>
+		</ol> 
+		<p><strong>Note :</strong>After following these steps, the name of your Flutter app should be updated. Remember to clean and rebuild your project to ensure the changes take effect.</p>
+		</section>	  
+			  
         
 
- <h5><strong>4. <u>Changing package name</u></strong></h5>
+ <h5><strong>4. <u>Changing Package name</u></strong></h5>
 	
-        <p>
-		<a href="https://developer.android.com/studio/build/application-id.html">Change the package name</a> in <code>AndroidManifest.xml and Gradle Scripts file.
-		</code></br>
-		Every application in Google Play has an unique application name usually in the form of <code>com.example.app</code>. Before you can publish your application you need to change the application name to something unique (like use your domain as prefix in reverse order). To change it, you need to:</p>
+      <p>To change the package name of a Flutter application, you need to update it in several places within your project. Follow these steps to change the package name:</p>
         <ol>
-            <li>Run IDE and open the project</li>
-			<li>click on manifest folder and open AndroidManifest.xml file</li>
-			<li>Change the package value.</li>
-            <li>click on the Gradle Scripts</li>
-            <li>open build.gradle (Module:app) file -> android -> defaultConfig -> applicationId value Rename</li>
-			<li>click on Sync Now</li>
-			<br/>
-        </ol>
+            <li>Rename the package folder: Open the root directory of your Flutter project and navigate to the lib folder. Rename the package folder to the desired new package name.</li>
+			<li>Update the package name in the pubspec.yaml file: Open the pubspec.yaml file located in the root directory of your project. Update the name field with the new package name.</li>
+			<li>Update the Android package name:</li>
+			<ul>
+				<li>• Open the AndroidManifest.xml file located at android/app/src/main/AndroidManifest.xml.<li>
+				<li>• Change the package attribute of the <manifest> tag to the new package name.</li>
+				</ul>
+            <li>Update the iOS bundle identifier:</li>
+			<ul>
+				<li>• Open the Info.plist file located at ios/Runner/Info.plist.<li>
+				<li>• Change the value of the CFBundleIdentifier key to the new package name.</li>
+				</ul>
+            <li>Update import statements and references:</li>
+			<ul>
+				<li>• In your Dart code files, update any import statements that reference the old package name to import the new package name.<li>
+				<li>• Replace any references to the old package name within your code with the new package name.</li>
+				</ul>
+			<li>Clean and rebuild the project: Run the following command in the root directory of your project to clean and rebuild your Flutter project:</li>
+			<ul>
+				<li>• flutter clean<li>
+				<li>• flutter pub get</li>
+				<li>• flutter run</li>
+				</ul>
+			
+        </ol> 
+		<p>After following these steps, your Flutter application should have the updated package name throughout the project. Make sure to update any dependencies or configurations that reference the old package name as well.</p>
 				   
                <h5><strong>5. <u> Run Application on Emulator</u></strong></h5>
        
@@ -232,25 +224,31 @@ rel="stylesheet" type="text/css">
 		</br>    
 		<h5><strong>6. <u>Sign your release build</u></strong></h5>
 		
-		<code>You can use Android Studio to manually generate signed APKs, either one at a time, or for multiple build variants at once. Instead of manually signing APKs, you can also configure your Gradle build settings to handle signing automatically during the build process. This section describes the manual signing process.more information to see,<a href = "https://developer.android.com/studio/publish/app-signing.html#sign-auto" >Configure the Build Process to Automatically Sign Your APK.</a></code>
-		<br><br>
-		<code>To manually sign your APK for release in Android Studio, follow these steps:</code>
-		<ol>
-			<li>In the menu bar, click Build -> Generate Signed APK.</li>
-			<li>Select the module you would like to release from the drop down, and click Next</li>
-			<li>If you already have a keystore, go to step 12. If you want to create a new keystore, click Create new</li>
-			<li>On the New Key Store window, provide the following information for your keystore and key</li>
-			<li>Key store path: Select the location where your keystore should be created.</li>
-			<li>Password: Create and confirm a secure password for your keystore.</li>
-			<li>Alias: Enter an identifying name for your key.</li>
-			<li>Password: Create and confirm a secure password for your key. This should be different from the password you chose for your keystore</li>
-			<li>Validity (years): Set the length of time in years that your key will be valid. Your key should be valid for at least 25 years, so you can sign app updates with the same key through the lifespan of your app.</li>
-			<li>Certificate: Enter some information about yourself for your certificate. This information is not displayed in your app, but is included in your certificate as part of the APK.</li>
-			<li>Once you complete the form, click OK.</li>
-			<li>On the Generate Signed APK Wizard window, select a keystore, a private key, and enter the passwords for both. (If you created your keystore in the last step, these fields are already populated for you.) Then click Next.</li>
-			<li>On the next window,select a destination for the signed APK(s), select the build type, (if applicable) choose the product flavor(s), and click Finish.</li>
-		</ol>
-
+			<p>To sign a release build for School Management App, you can follow these steps:
+			<br>
+			<strong>Step 1: Generate a keystore file</strong>
+			<li>Right-click on the "android" directory and select "Flutter" -> "Open Android module in Android Studio"</li>
+			<li>In the Generate Signed Bundle or APK dialog, select Android App Bundle or APK and click Next.</li>
+			<li>Below the field for Key store path, click Create new.</li>
+			<li>On the New Key Store window, provide the following information for your keystore and key, as shown in figure 2.<br>
+			<img alt="" src="images/application/key-store.png" height = "400" width = "400"></li>
+			<p>•  Keystore
+			<li><strong>Key store path:</strong> Select the location where your keystore should be created. Also, a file name should be added to the end of the location path with the .jks extension.</li></p>
+			<li><strong>Password:</strong> Create and confirm a secure password for your keystore.</li>
+		</p>
+		 <p>•  Key
+		<li><strong>Alias:</strong> Enter an identifying name for your key.</li>
+		<li><strong>Password:</strong> Create and confirm a secure password for your key. This should be the same as your keystore password.</li>
+		<li><strong>Validity (yeas):</strong> Set the length of time in years that your key will be valid. Your key should be valid for at least 25 years, so you can sign app updates with the same key through the lifespan of your app.</li>
+		<li>Certificate: Enter some information about yourself for your certificate. This information is not displayed in your app, but is included in your certificate as part of the APK.</li>
+		</p>
+		<li>Once you complete the form, click <strong>OK</strong>.</li>
+		<img alt="" src="images/application/crossFit-jks.png" height = "400" width = "400"></li>
+		<li>Now Replace <strong>crossfit.jks</strong> File and Open <strong>local.properties</strong> File And Change your <strong>.jks</strong> file Detail</li>
+		<li>Now you can follow these steps and Generate Your Release Apk</li>
+		<img alt="" src="images/application/apk.png" height = "200" width = "500"></li>
+		<p>Click on "Build" → then click on "Flutter" → and finally click on "Build APK".<br>
+		<strong>school_app_flutter\build\app\outputs\apk\release</strong>This space will appear after the build is complete.</p>
 			     <hr>
 		  </section>
 		  <section id="Notification_Setting">
