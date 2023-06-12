@@ -49,9 +49,19 @@ rel="stylesheet" type="text/css">
           <ul id="top-menu">
 			<li><a href="#Api-section">API section</a></li>
 			  <li><a href="#setting-up-android-project">setting up flutter Project</a></li>
-			   <li><a href="#Android-Customization">Fluuter Customization</a></li>
-			   <li><a href="#Notification_Setting">FCM Notification Setting</a></li>
-			    <li><a href="#Uploading-to-the-playstore">Uploading To The Playstore</a></li>
+			  <li><a href="#flutter-version">Flutter Version</a></li>
+			  <li><a href="#set-up-firebase-project">set up firebase</a></li>
+			  <li><a href="#change-application-name">Change Application Name</a></li>
+			  <li><a href="#changing-package-name">Changing Package name</a></li>
+			   <li><a href="#Android-Customization">Flutter Customization</a></li>
+			   <li><a href="#sign-your-release-build">Create Release Build</a></li>
+			   <li><a href="#sign-your-release-build">School App Pages</a>
+			   <ul> <li><a href="#fronted-login">Login Page</a></li>
+			<li><a href="#student-view">Student View</a></li>
+			<li><a href="#teacher_view">Teacher View</a></li></ul>
+			   </li>
+			   
+			   
 				 </ul>
         </aside>
       </div>
@@ -122,28 +132,35 @@ rel="stylesheet" type="text/css">
 			<br>
 
 		  </section>
-		  <section id="Android-Customization">
-		  			   <h3><strong>C). <u>Android Customization</u></strong></h3>
-			<br>
-               <h5><strong>1. <u>Server Url</u></strong></h5>
-			  The server url can be changed from the StaticData.dart file in the values folder.
-			  <ol>
-				<li>Open the /school_app_flutter\lib\utils\StaticData.dart</li>
-				<li>Example : BASE=http://..... </li>
-				<li>Change the BASE value to the server url.</li>
-				<li>Replace Your Url BASE value.</li>
-				
-			  </ol>
+		  
+		  <section id = "flutter-version"><h3><strong>C).<u>Flutter Version</u></strong></h3>
+			  <p>environment: </br>
+  sdk: '>=2.18.4 <3.0.0' </p>
+			  </section>
 			  
-
-			  
-				
-			   	   <h5><strong>2. <u>Change Launcher icon</u></strong></h5>
-		<p><a href="#change-launcher-icon">Change the Application icon</a> in <code>res/drawable-*/ic_launcher.png</code>	   </br>
-        Replace the following files in the <code>res</code> folder, with your own icon named <code>ic_launcher.png</code> :</p>
-    	<p>Change the launcher icon in <code>Replace the default app icons:<br>
-
-<h5><strong>3. <u>Change Application name</u></strong></h5>
+			  		<section id="set-up-firebase-project">
+				   <h3><strong>D).<u>Set Up Firebase</u></strong></h3>
+				   <p>To set up Firebase Database for a CrossFit app, follow these step-by-step instructions:</p>
+				   <p>
+				   <strong>Step 1: Create a Firebase project</strong>
+				   <li>Go to the Firebase console <strong><a href="https://console.firebase.google.com/" target="_blank">(https://console.firebase.google.com/)</a></strong> and sign in with your Google account.</li>
+				   <li>Click on "Add project" or select an existing project if you have one.</li>
+				   <li>Enter a name for your project and optionally choose a country/region.</li>
+				   <li>Click on "Create Project" to create the Firebase project.</li>
+				   </p>
+	
+				   <p><strong>Step 2: Connect your app to Firebase</strong>
+				   <li>In the Firebase console, go to your project.</li>
+				   <li>Click on the "Add app" button to add your Flutter app.</li>
+				   <li>Follow the instructions to register your app, providing the app package name (usually "com.example.your_app") and app nickname.</li>
+				   <li>Download the <strong>google-services.json</strong> file and place it in the <strong>android/app</strong> directory of your Flutter project.</li>
+				   </p>
+				   
+		</section>
+		
+		
+		<section id="change-application-name">
+<h3><strong>E).<u>Change Application name</u></strong></h3>
        <p>Change the application name To change the name of a Flutter app, you need to modify the appropriate files and configurations. Here's a step-by-step guide to help you change the app name:		
 		</p>
         <ol>
@@ -169,11 +186,9 @@ rel="stylesheet" type="text/css">
 		</ol> 
 		<p><strong>Note :</strong>After following these steps, the name of your Flutter app should be updated. Remember to clean and rebuild your project to ensure the changes take effect.</p>
 		</section>	  
-			  
-        
-
- <h5><strong>4. <u>Changing Package name</u></strong></h5>
-	
+		  
+		  <section id="changing-package-name">
+		   <h3><strong>F). <u>Changing Package name</u></strong></h3>
       <p>To change the package name of a Flutter application, you need to update it in several places within your project. Follow these steps to change the package name:</p>
         <ol>
             <li>Rename the package folder: Open the root directory of your Flutter project and navigate to the lib folder. Rename the package folder to the desired new package name.</li>
@@ -202,9 +217,27 @@ rel="stylesheet" type="text/css">
 			
         </ol> 
 		<p>After following these steps, your Flutter application should have the updated package name throughout the project. Make sure to update any dependencies or configurations that reference the old package name as well.</p>
-				   
-               <h5><strong>5. <u> Run Application on Emulator</u></strong></h5>
-       
+		
+		  
+		  <section id="Android-Customization">
+		  			   <h3><strong>G). <u>Android Customization</u></strong></h3>
+			<br>
+               <h5><strong>1. <u>Server Url</u></strong></h5>
+			  The server url can be changed from the StaticData.dart file in the values folder.
+			  <ol>
+				<li>Open the /school_app_flutter\lib\utils\StaticData.dart</li>
+				<li>Example : BASE=http://..... </li>
+				<li>Change the BASE value to the server url.</li>
+				<li>Replace Your Url BASE value.</li>
+				
+			  </ol>
+			  
+			  <h5><strong>2. <u>Change Launcher icon</u></strong></h5>
+		<p><a href="#change-launcher-icon">Change the Application icon</a> in <code>res/drawable-*/ic_launcher.png</code>	   </br>
+        Replace the following files in the <code>res</code> folder, with your own icon named <code>ic_launcher.png</code> :</p>
+    	<p>Change the launcher icon in <code>Replace the default app icons:<br>
+
+			   <h5><strong>3. <u> Run Application on Emulator</u></strong></h5>
 		<code>Create an AVD Definition as follows:</code>
 		<ol>
 			<li>Launch the Android Virtual Device Manager by selecting Tools -> Android -> AVD Manage or by clicking the AVD Manager icon in the toolbar</li>
@@ -222,8 +255,11 @@ rel="stylesheet" type="text/css">
 		</ol>
 		<code>It can take a few minutes for the emulator to start. You may have to unlock the screen. When you do, My First App appears on the emulator screen.</code>
 		</br>    
-		<h5><strong>6. <u>Sign your release build</u></strong></h5>
 		
+		<br>
+		 <section id="sign-your-release-build">
+		<h3><strong>H).<u>Sign your release build</u></strong></h3>
+		<br>
 			<p>To sign a release build for School Management App, you can follow these steps:
 			<br>
 			<strong>Step 1: Generate a keystore file</strong>
@@ -231,7 +267,7 @@ rel="stylesheet" type="text/css">
 			<li>In the Generate Signed Bundle or APK dialog, select Android App Bundle or APK and click Next.</li>
 			<li>Below the field for Key store path, click Create new.</li>
 			<li>On the New Key Store window, provide the following information for your keystore and key, as shown in figure 2.<br>
-			<img alt="" src="images/application/key-store.png" height = "400" width = "400"></li>
+			<img alt="" src="images/key-store.png" height = "400" width = "400"></li>
 			<p>•  Keystore
 			<li><strong>Key store path:</strong> Select the location where your keystore should be created. Also, a file name should be added to the end of the location path with the .jks extension.</li></p>
 			<li><strong>Password:</strong> Create and confirm a secure password for your keystore.</li>
@@ -243,51 +279,40 @@ rel="stylesheet" type="text/css">
 		<li>Certificate: Enter some information about yourself for your certificate. This information is not displayed in your app, but is included in your certificate as part of the APK.</li>
 		</p>
 		<li>Once you complete the form, click <strong>OK</strong>.</li>
-		<img alt="" src="images/application/crossFit-jks.png" height = "400" width = "400"></li>
-		<li>Now Replace <strong>crossfit.jks</strong> File and Open <strong>local.properties</strong> File And Change your <strong>.jks</strong> file Detail</li>
+		<img alt="" src="images/schooljks.png" height = "400" width = "400"></li>
+		<li>Now Replace <strong>dasinfomedia app.jks</strong> File and Open <strong>local.properties</strong> File And Change your <strong>.jks</strong> file Detail</li>
 		<li>Now you can follow these steps and Generate Your Release Apk</li>
-		<img alt="" src="images/application/apk.png" height = "200" width = "500"></li>
+		<img alt="" src="images/apk.png" height = "200" width = "500"></li>
 		<p>Click on "Build" → then click on "Flutter" → and finally click on "Build APK".<br>
 		<strong>school_app_flutter\build\app\outputs\apk\release</strong>This space will appear after the build is complete.</p>
 			     <hr>
 		  </section>
-		  <section id="Notification_Setting">
-          	<hr class="vertical-space2">
-               <h3><strong>D). <u>FCM Notification Setting</u></strong></h3>
-			    <p>Please visit the following link and perform 4 steps.</p>
-			   <p>
-		<a href="https://developers.intercom.com/v2.0/docs/android-fcm-push-notifications">Click here Create FCM Project Get Server Key</a></p>
-		<p>You will get server key in step 3. Which you need to set in wordpress plugin setting.</p>
-		<p> Please check videos provided in our school package for notification related setup.</p>
-
-			   </hr>
-			   <section>
-		<section id="Uploading-to-the-playstore">
-          	<hr class="vertical-space2">
-               <h3><strong>E). <u>Uploading to the Playstore</u></strong></h3>
-                    <p>A unique signed application needs to be sent to the playstore. To do that: </p>
-        <ol>
-        <li>First make sure that Lint Error checking has been turned off. To do that go to Preference -> Android </li>
-        <li>Select Lint Error Checking </li>
-        <li> Unchecked the "Run full error checking when exporting app" </li>
-        <li> Click on apply then OK </li>
-    </ol>
-
-        Now we can export the app:
-        <ol>      
-            <li>Left click on the project and go to Android Tools</li>
-            <li>Click on the "Export Signed Application"</li>
-            <li>Create a new keystore </li>
-            <li>Set the password </li>
-            <li>Set you alias 
-            <li>Select the location of where to save the apk </li>
-            <br/>
-        </ol>
-
-        <p>That&#39;s it.</p>
-
-			<hr>
-		</section>      
+		  
+		  <section id="fronted-login">
+		  <h3><strong><u>Login Page:</u></strong></h3>
+		    <p> You will see this login page.You can now login as admin username and password.</p><br>        
+			
+					<img alt="" src="images/login.png" height = "350" width = "200"><br><br>           
+			   <p>All users can login from this login page. </p>
+			   </ol>
+				<div id="footer"> </div>
+				
+				</section>
+				
+				<section id = "student-view"> <h3><strong><u> Student View</u></strong></h3>
+<strong> Login Admin ID And Password For Demo</strong><p> <strong>Email :</strong>studentapp@gmail.com<br><strong>Password :</strong>studentApp</p>
+		<img alt="" src="images/student-drawer.png" height = "350" width = "200">
+		<img alt="" src="images/student-dashboard.png" height = "350" width = "200">
+		
+			</section>
+			<br>
+			<section id = "teacher_view"> <h3><strong><u> Teacher View</u></strong></h3>
+<strong> Login Admin ID And Password For Demo</strong><p> <strong>Email :</strong>meazu05@gmail.com<br><strong>Password :</strong>123456789</p>
+		<img alt="" src="images/teacher-drawer.png" height = "350" width = "200">
+		<img alt="" src="images/teacher-dashboard.png" height = "350" width = "200">
+		
+			</section>
+		      
                     <!-- start-footer-->
           <div id="footer"> © 2017 Mojoomla All Rights Reserved. </div>
           <!-- end-footer -->
