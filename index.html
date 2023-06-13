@@ -60,6 +60,8 @@ rel="stylesheet" type="text/css">
 			<li><a href="#student-view">Student View</a></li>
 			<li><a href="#teacher_view">Teacher View</a></li></ul>
 			   </li>
+			   <li><a href="https://play.google.com/store/apps/details?id=com.schoolappniftysol" target="_blank">Download App</a></li>
+
 			   
 			   
 				 </ul>
@@ -140,7 +142,7 @@ rel="stylesheet" type="text/css">
 			  
 			  		<section id="set-up-firebase-project">
 				   <h3><strong>D).<u>Set Up Firebase</u></strong></h3>
-				   <p>To set up Firebase Database for a CrossFit app, follow these step-by-step instructions:</p>
+				   <p>To set up Firebase Database for a School App, follow these step-by-step instructions:</p>
 				   <p>
 				   <strong>Step 1: Create a Firebase project</strong>
 				   <li>Go to the Firebase console <strong><a href="https://console.firebase.google.com/" target="_blank">(https://console.firebase.google.com/)</a></strong> and sign in with your Google account.</li>
@@ -220,7 +222,7 @@ rel="stylesheet" type="text/css">
 		
 		  
 		  <section id="Android-Customization">
-		  			   <h3><strong>G). <u>Android Customization</u></strong></h3>
+		  			   <h3><strong>G). <u>Flutter Customization</u></strong></h3>
 			<br>
                <h5><strong>1. <u>Server Url</u></strong></h5>
 			  The server url can be changed from the StaticData.dart file in the values folder.
@@ -231,11 +233,16 @@ rel="stylesheet" type="text/css">
 				<li>Replace Your Url BASE value.</li>
 				
 			  </ol>
-			  
-			  <h5><strong>2. <u>Change Launcher icon</u></strong></h5>
-		<p><a href="#change-launcher-icon">Change the Application icon</a> in <code>res/drawable-*/ic_launcher.png</code>	   </br>
-        Replace the following files in the <code>res</code> folder, with your own icon named <code>ic_launcher.png</code> :</p>
-    	<p>Change the launcher icon in <code>Replace the default app icons:<br>
+		
+
+<h5><strong>2.<u>Change Launcher icon</u></strong></h5>
+		<p>Change the launcher icon in <code>Replace the default app icons:<br>
+
+<strong> -> </strong>For Android, navigate to the <strong>android/app/src/main/res</strong> directory in your Flutter project. Replace the icons in the mipmap directories with your custom icons, following the size-specific folders (e.g., mipmap-mdpi, mipmap-hdpi, etc.).<br>
+<strong> -> </strong>For iOS, navigate to the <strong> ios/Runner/Assets.xcassets/AppIcon</strong> appiconset directory in your Flutter project. Replace the default icons with your custom icons. Make sure to match the size and format requirements for each icon.</code> </p>
+        <img src="images/change-logo.png" id="change-img-logo">
+		
+        <p><strong>Note:</strong> You need the 512x512 px size for publishing to Google Play.</p> </section><br>
 
 			   <h5><strong>3. <u> Run Application on Emulator</u></strong></h5>
 		<code>Create an AVD Definition as follows:</code>
@@ -307,7 +314,7 @@ rel="stylesheet" type="text/css">
 			</section>
 			<br>
 			<section id = "teacher_view"> <h3><strong><u> Teacher View</u></strong></h3>
-<strong> Login Admin ID And Password For Demo</strong><p> <strong>Email :</strong>meazu05@gmail.com<br><strong>Password :</strong>123456789</p>
+<strong> Login Admin ID And Password For Demo</strong><p> <strong>Email :</strong>teacher@gmail.com<br><strong>Password :</strong>teacher</p>
 		<img alt="" src="images/teacher-drawer.png" height = "350" width = "200">
 		<img alt="" src="images/teacher-dashboard.png" height = "350" width = "200">
 		
