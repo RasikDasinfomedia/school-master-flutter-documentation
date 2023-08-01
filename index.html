@@ -152,11 +152,18 @@ rel="stylesheet" type="text/css">
 				   </p>
 	
 				   <p><strong>Step 2: Connect your app to Firebase</strong>
-				   <li>In the Firebase console, go to your project.</li>
-				   <li>Click on the "Add app" button to add your Flutter app.</li>
-				   <li>Follow the instructions to register your app, providing the app package name (usually "com.example.your_app") and app nickname.</li>
-				   <li>Download the <strong>google-services.json</strong> file and place it in the <strong>android/app</strong> directory of your Flutter project.</li>
-				   </p>
+					<p><u>For Android :</u></P>
+					<li>In the Firebase console, go to your project.</li>
+					<li>Click on the "Add app" button to add your Flutter app.</li>
+					<li>Follow the instructions to register your app, providing the app package name (usually "com.example.your_app") and app nickname.</li>
+					<li>Download the <strong>google-services.json</strong> file and place it in the <strong>android/app</strong> directory of your Flutter project.</li>
+					<br>
+					<p><u>For IOS :</u></P>
+					<li>In the Firebase Console, go to your project settings (the gear icon) and click on "Project settings."</li>
+					<li>Under the "Your apps" section, click on the iOS icon to add an iOS app.</li>
+					<li>Enter your iOS bundle identifier. This can be found in your Flutter project's <strong>Info.plist</strong> file under the <strong>CFBundleIdentifier</strong> key.</li>
+					<li>Download the <strong>GoogleService-Info.plist</strong> file and place it in the <strong>ios/Runner</strong> directory of your Flutter project.</li>
+					</p>
 				   
 		</section>
 		
