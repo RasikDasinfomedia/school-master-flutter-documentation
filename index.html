@@ -40,7 +40,7 @@ rel="stylesheet" type="text/css">
         <div class="col-md-3 logo"> <a href="index.html"><img src="images/mojoomla_logo.jpg" width="150" id="img-logo" alt="logo"></a> </div>
         <div class="col-md-8 col-md-offset-1 desc">
           <h4 class="slight">School Management System</h4>
-          <h5 class="slight"><small>Documented by Mojoomla - at June 01 2023</small></h5>
+          <h5 class="slight"><small>Documented by Mojoomla - at December 21 2023</small></h5>
         </div>
       </div>
       <div class="col-md-4">
@@ -55,12 +55,14 @@ rel="stylesheet" type="text/css">
 			  <li><a href="#changing-package-name">Changing Package name</a></li>
 			   <li><a href="#Android-Customization">Flutter Customization</a></li>
 			   <li><a href="#sign-your-release-build">Create Release Build</a></li>
+			   <li><a href="#release-apk-android">Release App in PlayStore</a></li>
+			   <li><a href="#release-apk-ios">Release App in AppStore</a></li>
 			   <li><a href="#school-app-pages">School App Overview</a>
 			   <ul> <li><a href="#fronted-login">Login Screen</a></li>
 			<li><a href="#student-view">Student Screen</a></li>
 			<li><a href="#teacher_view">Teacher Screen</a></li></ul>
 			   </li>
-			   <li><a href="https://play.google.com/store/apps/details?id=com.schoolappniftysol" target="_blank">Download App</a></li>
+			   <li><a href="https://apps.apple.com/us/app/school-management-system-app/id1255762471" target="_blank">Download App</a></li>
 
 			   
 			   
@@ -168,8 +170,22 @@ rel="stylesheet" type="text/css">
 		</section>
 		
 		
+			<section id="set-up-firebase-project">
+				   <h3><strong>E).<u>Firebase Cloud Messaging Set Up Key</u></strong></h3>
+				    <p>	</p>
+				   <p>
+				   <img alt="" src="images/fcm setup1.png" width = "100%"></li>
+				   <li>Go to Firebase Console, select the project setting then go to Cloud Messaging.</li>
+				   <li>Get the server key and login in web with admin credentials.</li>
+				   <li>Select the General Settings in System Settings option. Paste the FCM Key in Push Notification Setting column.</li>
+				   <li>FCM Key is set now, push notification will work after this set up.</li>
+				   </p>
+				   
+		</section>
+		
+		
 		<section id="change-application-name">
-<h3><strong>E).<u>Change Application name</u></strong></h3>
+<h3><strong>F).<u>Change Application name</u></strong></h3>
        <p>Change the application name To change the name of a Flutter app, you need to modify the appropriate files and configurations. Here's a step-by-step guide to help you change the app name:		
 		</p>
         <ol>
@@ -195,9 +211,12 @@ rel="stylesheet" type="text/css">
 		</ol> 
 		<p><strong>Note :</strong>After following these steps, the name of your Flutter app should be updated. Remember to clean and rebuild your project to ensure the changes take effect.</p>
 		</section>	  
+		
+		
+		
 		  
 		  <section id="changing-package-name">
-		   <h3><strong>F). <u>Changing Package name</u></strong></h3>
+		   <h3><strong>G). <u>Changing Package name</u></strong></h3>
       <p>To change the package name of a Flutter application, you need to update it in several places within your project. Follow these steps to change the package name:</p>
         <ol>
             <li>Rename the package folder: Open the root directory of your Flutter project and navigate to the lib folder. Rename the package folder to the desired new package name.</li>
@@ -229,15 +248,15 @@ rel="stylesheet" type="text/css">
 		
 		  
 		  <section id="Android-Customization">
-		  			   <h3><strong>G). <u>Flutter Customization</u></strong></h3>
+		  			   <h3><strong>H). <u>Flutter Customization</u></strong></h3>
 			<br>
                <h5><strong>1. <u>Server Url</u></strong></h5>
 			  The server url can be changed from the StaticData.dart file in the values folder.
 			  <ol>
 				<li>Open the /school_app_flutter\lib\utils\StaticData.dart</li>
-				<li>Example : BASE=http://..... </li>
-				<li>Change the BASE value to the server url.</li>
-				<li>Replace Your Url BASE value.</li>
+				<li>Example : baseUrl =http://..... </li>
+				<li>Change the baseUrl value to the server url.</li>
+				<li>Replace Your baseUrl value.</li>
 				
 			  </ol>
 		
@@ -272,7 +291,7 @@ rel="stylesheet" type="text/css">
 		
 		<br>
 		 <section id="sign-your-release-build">
-		<h3><strong>H).<u>Sign your release build</u></strong></h3>
+		<h3><strong>I).<u>Sign your release build</u></strong></h3>
 		<br>
 			<p>To sign a release build for School Management App, you can follow these steps:
 			<br>
@@ -301,8 +320,63 @@ rel="stylesheet" type="text/css">
 		<strong>school_app_flutter\build\app\outputs\apk\release</strong>This space will appear after the build is complete.</p>
 		  </section>
 		 
+		 
+		 <section id="release-apk-android">
+			<h3><strong>J).<u>Release App in PlayStore</u></strong></h3>
+			<p>To sign a release app for School Management , you can follow these steps:
+			<br>
+			
+			<li>Please be aware that there is a registration fee of at least $25 associated with the process.</li>
+			<li>Click on the Create app button in the All apps section. Enter the app details in the "Create app" form.</li>
+			<img alt="" src="images/app_release1.png" width = "100%"></li>
+			<li>After creating the app, we have to go through multiple tasks to release the application.</li>
+			<img alt="" src="images/app_release2.png" width = "100%"></li>
+			<img alt="" src="images/app_release3.png" width = "100%"></li>
+			<img alt="" src="images/app_release4.png" width = "100%"></li>
+			<li>However, all these steps will be self-explanatory.<br>
+			<li>At each step, you'll be prompted for information about your application, advertisements, privacy policy, and more.<br>
+			<li>It's important to note that you can proceed to publish only after completing these steps.<br>
+			<li>Make sure to mention everything clearly. Especially the questions about data collection. Because, at any time if Google found that your prescribed information is wrong, your app will not be published or will be taken out, if it's published.<br>
+			<li>After completing these steps, we have to send the app for review. Our app will be published once the review is completed from Google Play team.<br>
+			<li>It's important to note that there's a higher chance of the app getting rejected if it has security or advertising-related issues.<br>
+			<li>Therefore, make sure to thoroughly review your app to ensure that it doesn't have any potential problems in data collection. This will contribute to a smoother and more successful app release experience.<br>
+			</p>
+	</section>	
+	
+	<section id="release-apk-ios">
+			<h3><strong>K).<u>Release App in AppStore</u></strong></h3>
+			<p>To sign a release app for School Management App, you can follow these steps:
+			<br>
+			
+			<li>Before you can build and release your app on the App Store, you need to create a record for it using App Store Connect. But first, you need to register a unique bundle ID for your app. This can be done by logging into your Apple Developer account and following these steps:</li>
+			<li>Open the App IDs page and select + to create a new Bundle ID.</li>
+			
+			<li>Fill out the needed information: App Name and Explicit App ID. If your app needs specific services, select them then select Continue.</li>
+		
+			<li>Review the details and select Register to finish.<br>
+			<li>Now that we have a unique bundle ID, it’s time to create a record for your app on the App Store Connect.<br>
+			<li>It's important to note that you can proceed to publish only after completing these steps.<br>
+			<li>Log in to the App Store Connect and select My Apps then select + then New App.<br>
+			<li>Fill in your app details and make sure iOS is selected, then select Create. From the sidebar, select App Information. In the "General Information" section, select the Bundle ID that you registered above.<br>
+			<li>You’ve set everything up from Apple’s side, and next you'll adjust your Xcode project’s settings to prepare your app for release. Go ahead and fire up Xcode.<br>
+			<li>Open Runner.xcworkspace that is inside your app’s iOS folder. From the Xcode project navigator, select the Runner project. Then, select the Runner target in the main view sidebar.<br>
+			<li>Go to the General tab. In the Identity section, fill out the information and make sure the Bundle Identifier is the one registered on App Store Connect. In the Signing & Capabilities section, make sure Automatically manage signing is checked and select your team.<br>
+			<li>Go to the Deployment section of the Build Settings tab and set iOS Deployment Target to the minimum iOS version you support. Fill out the rest of the information as needed. Next, you'll update your app’s icon and launch image by selecting Assets.xcassets in the Runner folder from Xcode’s project navigator.<br>
+			<li>Open Runner.xcworkspace that is inside your app’s iOS folder. From the Xcode project navigator, select the Runner project. Then, select the Runner target in the main view sidebar.<br>
+			<li>At this point, all the settings have been updated for release and there is a placeholder ready on App Store Connect, which means you can build and release.<br>
+			<li>From the command line, run flutter build ipa to generate an Xcode build archive. You can also append --build-name and --build-number to override the default version and build numbers, respectively. Then go back to Xcode and open the newly created archive from your project's archive directory.<br>
+			<li>Check the information then select Validate to build. Once the archive is successfully validated, select Distribute App.<br>
+			<li>Back on App Store Connect, check the status of your build from the Activities tab. Once it’s ready to release:<br>
+			<li>Go to Pricing and Availability and fill out the required information. From the sidebar, select the status.<br>
+			<li>Select Prepare for Submission and complete all required fields. Select Submit for Review.<br>
+			<li> Your app will now be uploaded to the App Store. Apple will review your app before releasing and keep you updated on the status of your app.<br>
+			</p>
+	</section>	
+	
+		 
+		 
 		 <section id="school-app-pages">
-		<h3><strong>I).<u>School App Overview</u></strong></h3>
+		<h3><strong>L).<u>School App Overview</u></strong></h3>
 		<br>
 		  
 		  <section id="fronted-login">
